@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+      <div class="app">
+            <div class="pannel">
+                  <img class="HabbitLogo" src="./images/logo.svg" alt="habbit logo">
+                  <nav class="menu">
+                        <div class="menu__list"></div>
+                  </nav>
+                  <button class="menu__add">Add</button>
+            </div>
+            <div class="content">
+                  <header>
+                        <h1 class="h1"></h1>
+                        <div class="progressBox">
+                              <div class="progress__text">
+                                    <div class="progress__name">Прогресс</div>
+                                    <div class="progress__persent">80%</div>
+                              </div>
+                              <div class="progress__bar">
+                                    <div class="progress__cover-bar"></div>
+                              </div>
+                        </div>
+                  </header>
+                  <main>
+                        <div id="days"></div>
+                        <div class="habbit">
+                              <div class="habbit__day">Day1</div>
+                              <form class="habbit__form" onsubmit="addDays(event)">
+                                    <div class="habbit__comment">
+                                          <input 
+                                            name="comment" 
+                                            placeholder="Комментарии" 
+                                            type="text"
+                                           >
+                                    </div>
+                                    <button class="habbit__add">Добавить</button>
+                              </form>
+                        </div>
+                  </main>
+            </div>
+            <div class="cover cover_hidden" id="add_popup">
+                  <div class="popup">
+                        
+                        <h2>New habbit</h2>
+                        <div class="icon-label">Icon</div>
+                        <div class="icon-select">
+
+                        <div>
+                              <button class="icon icon_active">
+                                    <img src="./images/Water.svg" alt="">
+                              </button>
+                              <button class="icon">
+                                    <img src="./images/Water.svg" alt="">
+                              </button>
+                              <button class="icon">
+                                    <img src="./images/food.svg" alt="">
+                              </button> 
+                        </div>
+                              
+                           <form class="popup__form" onsubmit="addHabbits(event)"> 
+
+                              <input type="text" name="name" placeholder="Название">
+                              <input type="number" name="target" placeholder="Цель">
+
+                              <button class="button" type="submit">Добавить</button>
+                              
+                           </form>
+                           <button class="close-btn">Закрыть</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <script src="./index.js"></script>
+</body>
+
+</html>
